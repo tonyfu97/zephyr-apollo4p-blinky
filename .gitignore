@@ -1,0 +1,15 @@
+# Ignore build output
+build/
+
+# Optional: Ignore CMake generated files if they're ever accidentally outside build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Ignore temporary editor/OS files
+*.swp
+*.swo
+*.tmp
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Zephyr (Apollo4 Plus)",
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/build/zephyr/zephyr.elf",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "jlink",
+      "serverpath": "C:/Program Files/SEGGER/JLink_V794i/JLinkGDBServerCL.exe",
+      "armToolchainPath": "C:/toolchain/arm-gnu-toolchain-13.2.Rel1/bin",
+      "device": "AMAP42KP-KBR",
+      "interface": "swd",
+      "runToEntryPoint": "main",
+      "svdFile": "C:/ambiq/AmbiqSuite_R4.5.0/pack/SVD/apollo4p.svd",
+      "showDevDebugOutput": "both",
+      "swoConfig": {
+        "enabled": true,
+        "decoders": [
+          { "type": "console", "label": "ITM", "port": 0, "encoding": "ascii" }
+        ],
+        "swoFrequency": 1000000,
+        "source": "probe"
+      }
+    }
+  ]
+}
