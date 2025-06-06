@@ -57,10 +57,10 @@ python -m venv env\zephyr
 Then activate the environment:
 
 ```powershell
-.\env\zephyr\Scripts\Activate.ps1
+.\env\zephyr\Scripts\activate
 ```
 
-> If you see a permission error, open PowerShell as **Administrator** and run:
+> If you see a permission error, you can bypass it using:
 >
 > ```powershell
 > Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
@@ -83,7 +83,7 @@ pip install west
 
 ## 5. Initialize Zephyr Project
 
-We will clone the Zephyr source tree and its related modules using `west`. This creates a folder typically called `zephyrproject`. It will contain the core Zephyr RTOS source and its modules. We generally **do not modify** this directly unless we're contributing to Zephyr itself. Our application code should live outside or in a separate folder inside this tree. This following commands will take some time.
+We will clone the Zephyr source tree and its related modules using `west`. This creates a folder typically called `zephyrproject`. It will contain the core Zephyr RTOS source and its modules. We generally **do not modify** this directly unless we're contributing to Zephyr itself. We will just create our applications in a folder under this directory.
 
 ```powershell
 west init zephyrproject
@@ -193,7 +193,7 @@ Then navigate to your application directory and build:
 
 ```powershell
 cd C:\zephyr\zephyrproject\myApps\blinky
-west build -b ambiq_apollo4p_evb .
+west build -b apollo4p_evb .
 ```
 
 If everything is set up correctly, the build system will generate the firmware in the `build\zephyr\` folder, including `zephyr.elf`, which you can later flash to the board.
